@@ -52,6 +52,17 @@ Punto de partida lo-fi: Sample Rate 12000 Hz, Sample Size 8 bits, Anti-Alias 50 
 | Radio / teléfono | Sample Rate 6000 Hz, Sample Size 10, Distortion 6 dB |
 | Calidez suave en la mezcla | Saturation 3 dB, Even 20 %, Tape 20 % |
 
+### Recetas con Even / Odd
+| Efecto | Ajustes |
+|---|---|
+| Calidez de valvula en voces | Even 40 %, Odd 0 %, Saturation 2 dB |
+| Mordiente en guitarras o sintes | Even 10 %, Odd 45 %, Distortion 4 dB |
+| Bajo con cuerpo y definicion | Even 30 %, Odd 15 %, Tape 20 % |
+| Bateria con pegada | Even 20 %, Odd 35 %, Saturation 3 dB |
+| Brillo sutil en el bus master | Even 15 %, Odd 10 %, Tape 15 % |
+
+Even (pares) suma calidez y redondez; Odd (impares) suma mordiente y presencia. Combinalos para equilibrar ambas cosas.
+
 Los valores son orientativos: prueba y ajusta de oído.
 
 ## Instalación
