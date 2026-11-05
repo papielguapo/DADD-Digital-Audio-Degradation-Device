@@ -1,5 +1,9 @@
 # DADD - Digital Audio Degradation Device
 
+![DADD](docs/images/dadd-gui.png)
+
+Guia de uso con explicacion de cada control: [docs/GUIDE.md](docs/GUIDE.md)
+
 Plugin VST3 / Standalone lo-fi hecho con JUCE por PAPIELGUAPO.
 
 - Reduccion de Sample Rate (1000-48000 Hz u Off) y Sample Size (1-24 bits)
