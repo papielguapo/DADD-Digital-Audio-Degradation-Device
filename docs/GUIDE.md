@@ -63,6 +63,17 @@ Punto de partida lo-fi: Sample Rate 12000 Hz, Sample Size 8 bits, Anti-Alias 50 
 
 Even (pares) suma calidez y redondez; Odd (impares) suma mordiente y presencia. Combinalos para equilibrar ambas cosas.
 
+### Recetas para bajos 808
+| Efecto | Ajustes |
+|---|---|
+| 808 limpio con peso | Even 35 %, Odd 5 %, Saturation 2 dB |
+| 808 que se oiga en altavoces pequenos | Even 25 %, Odd 30 %, Saturation 4 dB, Tape 15 % |
+| 808 sucio estilo trap | Even 20 %, Odd 40 %, Distortion 8 dB, Saturation 3 dB |
+| 808 lo-fi crujiente | Sample Size 10, Sample Rate 22000 Hz, Anti-Alias 60 %, Even 30 %, Tape 25 % |
+| 808 grueso y oscuro | Even 45 %, Odd 0 %, Tape 40 %, Saturation 3 dB |
+
+Consejos: los armonicos impares y la distorsion ayudan a que el 808 se escuche en altavoces pequenos, pero demasiada distorsion le quita pegada al sub. Baja Trim OUT para compensar el nivel que ganas al saturar y vigila el medidor OUT.
+
 Los valores son orientativos: prueba y ajusta de oído.
 
 ## Instalación
