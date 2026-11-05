@@ -4,6 +4,13 @@
 
 Guia de uso con explicacion de cada control: [docs/GUIDE.md](docs/GUIDE.md)
 
+## Descargar
+
+- [DADD-v1.0.0-VST3-Windows.zip](download/DADD-v1.0.0-VST3-Windows.zip) (VST3 para Windows 64 bits)
+- Tambien en [Releases](https://github.com/papielguapo/DADD-Digital-Audio-Degradation-Device/releases/latest)
+
+Instalacion: descomprime y copia la carpeta DADD.vst3 a C:\Program Files\Common Files\VST3, luego vuelve a escanear plugins en tu DAW.
+
 Plugin VST3 / Standalone lo-fi hecho con JUCE por PAPIELGUAPO.
 
 - Reduccion de Sample Rate (1000-48000 Hz u Off) y Sample Size (1-24 bits)
