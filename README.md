@@ -11,3 +11,10 @@ Plugin VST3 / Standalone lo-fi hecho con JUCE por PAPIELGUAPO.
 ## Compilar
 Abrir el .jucer con Projucer (JUCE 8), exportar a Visual Studio y compilar Release x64.
 
+
+## AU (macOS)
+El workflow .github/workflows/build-au.yml compila el AU en un runner de macOS y sube el .component como artefacto (pestana Actions).
+
+## AAX (Pro Tools)
+Requiere el SDK de AAX de Avid y firma PACE/iLok. Pasos: descargar el SDK, en Projucer anadir su ruta en Global Paths (AAX SDK), activar buildAAX en pluginFormats y exportar a Visual Studio.
+

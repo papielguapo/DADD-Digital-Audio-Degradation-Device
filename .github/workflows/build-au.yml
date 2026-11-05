@@ -1,0 +1,44 @@
+name: Build AU (macOS)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  au:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone JUCE
+        run: git clone --depth 1 --branch 8.0.6 https://github.com/juce-framework/JUCE.git "$HOME/JUCE"
+
+      - name: Build Projucer
+        run: |
+          xcodebuild -project "$HOME/JUCE/extras/Projucer/Builds/MacOSX/Projucer.xcodeproj" \
+            -configuration Release -scheme "Projucer - App" -derivedDataPath "$HOME/pj" \
+            CODE_SIGNING_ALLOWED=NO | tail -n 5
+
+      - name: Export Xcode project
+        run: |
+          PJ="$HOME/pj/Build/Products/Release/Projucer.app/Contents/MacOS/Projucer"
+          "$PJ" --set-global-search-path osx defaultJuceModulePath "$HOME/JUCE/modules"
+          "$PJ" --resave DADD-Digital-Audio-Degradation-Device.jucer
+
+      - name: Build AU
+        run: |
+          cd Builds/MacOSX
+          SCHEME=$(xcodebuild -list -json | python3 -c "import json,sys; print([s for s in json.load(sys.stdin)['project']['schemes'] if s.endswith('AU')][0])")
+          xcodebuild -scheme "$SCHEME" -configuration Release CODE_SIGNING_ALLOWED=NO | tail -n 5
+
+      - name: Collect
+        run: |
+          mkdir -p out
+          cp -R Builds/MacOSX/build/Release/*.component out/ || true
+          ls out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DADD-AU-macOS
+          path: out

@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="VzWiSB" name="Lo-Fi by PAPIELGUAPO" projectType="audioplug"
               useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1"
-              companyName="PAPIELGUAPO" pluginName="DADD" pluginDesc="Digital Audio Degradation Device" pluginManufacturer="PAPIELGUAPO" companyWebsite="www.PAPIELGUAPO.com" bundleIdentifier="www.PAPIELGUAPO.com/Lo-Fi">
+              companyName="PAPIELGUAPO" pluginName="DADD" pluginFormats="buildVST3,buildAU,buildStandalone" pluginDesc="Digital Audio Degradation Device" pluginManufacturer="PAPIELGUAPO" companyWebsite="www.PAPIELGUAPO.com" bundleIdentifier="www.PAPIELGUAPO.com/Lo-Fi">
   <MAINGROUP id="p6JLhM" name="Lo-Fi by PAPIELGUAPO">
     <GROUP id="{2F5CE426-E046-2C48-006A-48A0A486CEBD}" name="Source">
       <FILE id="R7oBW4" name="PluginProcessor.cpp" compile="1" resource="0"
@@ -77,5 +77,12 @@
         <MODULEPATH id="juce_video" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </VS2026>
+    <XCODE_MAC targetFolder="Builds/MacOSX" macOSDeploymentTarget="10.13" extraCompilerFlags="" vst3Folder="" auFolder="">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="DADD"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="DADD"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS/>
+    </XCODE_MAC>
   </EXPORTFORMATS>
 </JUCERPROJECT>
