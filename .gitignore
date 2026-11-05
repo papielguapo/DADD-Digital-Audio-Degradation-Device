@@ -1,0 +1,13 @@
+x64/
+Win32/
+.vs/
+*.user
+*.suo
+*.ipch
+*.pdb
+*.ilk
+*.obj
+*.log
+*.ps1
+Builds/VisualStudio2026/x64/
+
